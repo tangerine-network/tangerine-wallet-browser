@@ -161,30 +161,30 @@ NetworkDropdown.prototype.render = function () {
       ]
     ),
 
-    h(
-      DropdownMenuItem,
-      {
-        key: 'kovan',
-        closeMenu: () => this.props.hideNetworkDropdown(),
-        onClick: () => {
-          console.log('handle click kovan!')
-          this.handleClick('kovan')
-        },
-        style: dropdownMenuItemStyle,
-      },
-      [
-        providerType === 'kovan' ? h('i.fa.fa-check') : h('.network-check__transparent', '✓'),
-        h(NetworkDropdownIcon, {
-          backgroundColor: '#7057ff', // $cornflower-blue
-          isSelected: providerType === 'kovan',
-        }),
-        h('span.network-name-item', {
-          style: {
-            color: providerType === 'kovan' ? '#ffffff' : '#9b9b9b',
-          },
-        }, this.context.t('kovan')),
-      ]
-    ),
+    // h(
+    //   DropdownMenuItem,
+    //   {
+    //     key: 'kovan',
+    //     closeMenu: () => this.props.hideNetworkDropdown(),
+    //     onClick: () => {
+    //       console.log('handle click kovan!')
+    //       this.handleClick('kovan')
+    //     },
+    //     style: dropdownMenuItemStyle,
+    //   },
+    //   [
+    //     providerType === 'kovan' ? h('i.fa.fa-check') : h('.network-check__transparent', '✓'),
+    //     h(NetworkDropdownIcon, {
+    //       backgroundColor: '#7057ff', // $cornflower-blue
+    //       isSelected: providerType === 'kovan',
+    //     }),
+    //     h('span.network-name-item', {
+    //       style: {
+    //         color: providerType === 'kovan' ? '#ffffff' : '#9b9b9b',
+    //       },
+    //     }, this.context.t('kovan')),
+    //   ]
+    // ),
 
     // h(
     //   DropdownMenuItem,
