@@ -1,4 +1,7 @@
 {
+  "tangerine_testnet": {
+    "message": "Tangerine Testnet"
+  },
   "privacyMode": {
     "message": "개인 정보 보호 모드"
   },

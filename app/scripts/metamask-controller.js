@@ -22,7 +22,7 @@ const createOriginMiddleware = require('./lib/createOriginMiddleware')
 const createLoggerMiddleware = require('./lib/createLoggerMiddleware')
 const providerAsMiddleware = require('eth-json-rpc-middleware/providerAsMiddleware')
 const {setupMultiplex} = require('./lib/stream-utils.js')
-const KeyringController = require('eth-keyring-controller')
+const KeyringController = require('@byzantine-lab/keyring-controller')
 const NetworkController = require('./controllers/network')
 const PreferencesController = require('./controllers/preferences')
 const AppStateController = require('./controllers/app-state')
@@ -170,6 +170,7 @@ module.exports = class MetamaskController extends EventEmitter {
       initState: initState.KeyringController,
       getNetwork: this.networkController.getNetworkState.bind(this.networkController),
       encryptor: opts.encryptor || undefined,
+      hdPath: `m/44'/373'/0'/0`,
     })
 
     this.keyringController.memStore.subscribe((s) => this._onKeyringControllerUpdate(s))

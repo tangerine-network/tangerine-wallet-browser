@@ -1,4 +1,4 @@
-const KeyringController = require('eth-keyring-controller')
+const KeyringController = require('@byzantine-lab/keyring-controller')
 const log = require('loglevel')
 
 const seedPhraseVerifier = {
@@ -29,6 +29,7 @@ const seedPhraseVerifier = {
       const opts = {
         mnemonic: seedWords,
         numberOfAccounts: createdAccounts.length,
+        hdPath: `m/44'/373'/0'/0`,
       }
 
       const keyring = new Keyring(opts)

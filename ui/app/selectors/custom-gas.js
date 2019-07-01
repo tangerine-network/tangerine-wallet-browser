@@ -238,10 +238,10 @@ function getRenderableBasicEstimateData (state, gasLimit) {
   const {
     gas: {
       basicEstimates: {
-        safeLow,
+        // safeLow,
         fast,
         fastest,
-        safeLowWait,
+        // safeLowWait,
         fastestWait,
         fastWait,
       },
@@ -249,15 +249,15 @@ function getRenderableBasicEstimateData (state, gasLimit) {
   } = state
 
   return [
-    {
-      labelKey: 'slow',
-      feeInPrimaryCurrency: getRenderableEthFee(safeLow, gasLimit),
-      feeInSecondaryCurrency: showFiat
-        ? getRenderableConvertedCurrencyFee(safeLow, gasLimit, currentCurrency, conversionRate)
-        : '',
-      timeEstimate: safeLowWait && getRenderableTimeEstimate(safeLowWait),
-      priceInHexWei: getGasPriceInHexWei(safeLow),
-    },
+    // {
+    //   labelKey: 'slow',
+    //   feeInPrimaryCurrency: getRenderableEthFee(safeLow, gasLimit),
+    //   feeInSecondaryCurrency: showFiat
+    //     ? getRenderableConvertedCurrencyFee(safeLow, gasLimit, currentCurrency, conversionRate)
+    //     : '',
+    //   timeEstimate: safeLowWait && getRenderableTimeEstimate(safeLowWait),
+    //   priceInHexWei: getGasPriceInHexWei(safeLow),
+    // },
     {
       labelKey: 'average',
       feeInPrimaryCurrency: getRenderableEthFee(fast, gasLimit),
@@ -293,7 +293,7 @@ function getRenderableEstimateDataForSmallButtonsFromGWEI (state) {
   const {
     gas: {
       basicEstimates: {
-        safeLow,
+        // safeLow,
         fast,
         fastest,
       },
@@ -301,14 +301,14 @@ function getRenderableEstimateDataForSmallButtonsFromGWEI (state) {
   } = state
 
   return [
-    {
-      labelKey: 'slow',
-      feeInSecondaryCurrency: showFiat
-        ? getRenderableConvertedCurrencyFee(safeLow, gasLimit, currentCurrency, conversionRate)
-        : '',
-      feeInPrimaryCurrency: getRenderableEthFee(safeLow, gasLimit, NUMBER_OF_DECIMALS_SM_BTNS, true),
-      priceInHexWei: getGasPriceInHexWei(safeLow, true),
-    },
+    // {
+    //   labelKey: 'slow',
+    //   feeInSecondaryCurrency: showFiat
+    //     ? getRenderableConvertedCurrencyFee(safeLow, gasLimit, currentCurrency, conversionRate)
+    //     : '',
+    //   feeInPrimaryCurrency: getRenderableEthFee(safeLow, gasLimit, NUMBER_OF_DECIMALS_SM_BTNS, true),
+    //   priceInHexWei: getGasPriceInHexWei(safeLow, true),
+    // },
     {
       labelKey: 'average',
       feeInSecondaryCurrency: showFiat

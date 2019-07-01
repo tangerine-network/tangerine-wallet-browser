@@ -1,5 +1,6 @@
 import { clone, uniqBy, flatten } from 'ramda'
 import BigNumber from 'bignumber.js'
+import { hexToNumberString } from 'web3-utils'
 import {
   loadLocalStorageData,
   saveLocalStorageData,
@@ -185,8 +186,7 @@ export function fetchBasicGasEstimates () {
     const timeLastRetrieved = basicPriceEstimatesLastRetrieved || loadLocalStorageData('BASIC_PRICE_ESTIMATES_LAST_RETRIEVED') || 0
 
     dispatch(basicGasEstimatesLoadingStarted())
-
-    const promiseToFetch = Date.now() - timeLastRetrieved > 75000
+    const promiseToFetch = Date.now() - timeLastRetrieved > 7
     ? fetch('https://dev.blockscale.net/api/gasexpress.json', {
       'headers': {},
       'referrer': 'https://dev.blockscale.net/api/',
@@ -204,6 +204,7 @@ export function fetchBasicGasEstimates () {
         block_time: blockTime,
         blockNum,
       }) => {
+
         const basicEstimates = {
           safeLow,
           average,
@@ -212,6 +213,22 @@ export function fetchBasicGasEstimates () {
           blockTime,
           blockNum,
         }
+
+        console.log('[FETCH GAS!!!]', basicEstimates)
+
+        fetch('https://testnet-rpc.tangerine-network.io', {
+          'headers': {
+            'Content-Type': 'application/json',
+          },
+          'body': '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":67}',
+          'method': 'POST',
+        })
+        .then(r => r.json())
+        .then((res) => {
+          console.log(res)
+          // const gasEstimate = parseInt(hexToNumberString(res).slice(0, -9))
+          // console.log('RES FROM TANGERINE RPC!!!!!', res, gasEstimate)
+        })
 
         const timeRetrieved = Date.now()
         dispatch(setBasicPriceEstimatesLastRetrieved(timeRetrieved))
@@ -242,6 +259,18 @@ export function fetchBasicGasAndTimeEstimates () {
     const timeLastRetrieved = basicPriceAndTimeEstimatesLastRetrieved || loadLocalStorageData('BASIC_GAS_AND_TIME_API_ESTIMATES_LAST_RETRIEVED') || 0
 
     dispatch(basicGasEstimatesLoadingStarted())
+
+    fetch('https://testnet-rpc.tangerine-network.io', {
+      'headers': {
+        'Content-Type': 'application/json',
+      },
+      'body': '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":67}',
+      'method': 'POST',
+    })
+    .then(r => r.json())
+    .then((res) => {
+      console.log('RES FROM TANGERINE RPC!!!!!', res)
+    })
 
     const promiseToFetch = Date.now() - timeLastRetrieved > 75000
       ? fetch('https://ethgasstation.info/json/ethgasAPI.json', {

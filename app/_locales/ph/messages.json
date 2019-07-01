@@ -1,4 +1,7 @@
 {
+  "tangerine_testnet": {
+    "message": "Tangerine Testnet"
+  },
   "privacyMode": {
     "message": "Mode ng Privacy"
   },
@@ -322,7 +325,7 @@
     "message": "i-click ito",
     "description": "tulad ng -i-click dito- para sa mas maraming impormasyon (kasama ng troubleTokenBalances)"
   },
-  "hide": { 
+  "hide": {
     "message": "Itago"
   },
   "hideToken": {

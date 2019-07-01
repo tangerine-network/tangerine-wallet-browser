@@ -1,4 +1,7 @@
 {
+  "tangerine_testnet": {
+    "message": "Tangerine Testnet"
+  },
   "privacyMode": {
     "message": "Modo privado"
   },
@@ -1239,7 +1242,7 @@
   },
   "pending": {
     "message": "pendiente"
-  },  
+  },
   "popularTokens": {
     "message": "Tokens Corrientes"
   },
