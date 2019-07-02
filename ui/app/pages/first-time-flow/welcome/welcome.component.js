@@ -17,11 +17,11 @@ export default class Welcome extends PureComponent {
     t: PropTypes.func,
   }
 
-  constructor (props) {
-    super(props)
+  // constructor (props) {
+  //   super(props)
 
-    this.animationEventEmitter = new EventEmitter()
-  }
+  //   // this.animationEventEmitter = new EventEmitter()
+  // }
 
   componentDidMount () {
     const { history, participateInMetaMetrics, welcomeScreenSeen } = this.props
@@ -43,10 +43,17 @@ export default class Welcome extends PureComponent {
     return (
       <div className="welcome-page__wrapper">
         <div className="welcome-page">
-          <Mascot
+          {/* <Mascot
             animationEventEmitter={this.animationEventEmitter}
             width="125"
             height="125"
+          /> */}
+          <img
+            style={{
+              height: '50px',
+              marginBottom: '40px',
+            }}
+            src={'images/logo/metamask-logo-horizontal.svg'}
           />
           <div className="welcome-page__header">
             { t('welcome') }
