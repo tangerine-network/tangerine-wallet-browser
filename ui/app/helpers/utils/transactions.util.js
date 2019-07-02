@@ -225,5 +225,5 @@ export function getBlockExplorerUrlForTx (networkId, hash, rpcPrefs = {}) {
     return `${rpcPrefs.blockExplorerUrl}/tx/${hash}`
   }
   const prefix = prefixForNetwork(networkId)
-  return `https://${prefix}etherscan.io/tx/${hash}`
+  return `https://${prefix}tangerine.garden/transaction/${hash}`
 }

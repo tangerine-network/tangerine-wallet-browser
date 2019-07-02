@@ -17,6 +17,12 @@ module.exports = function (network) {
     case 5: // goerli test net
       prefix = 'goerli.'
       break
+    case 373:
+      prefix = ''
+      break
+    case 374:
+      prefix = 'testnet.'
+      break
     default:
       prefix = ''
   }

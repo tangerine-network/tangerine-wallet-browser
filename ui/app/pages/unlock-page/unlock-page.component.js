@@ -152,14 +152,14 @@ export default class UnlockPage extends Component {
             <img
               style={{
                 height: '50px',
-                marginBottom: '40px',
+                marginBottom: '30px',
               }}
               src={'images/logo/metamask-logo-horizontal.svg'}
             />
           </div>
-          <h1 className="unlock-page__title">
+          {/* <h1 className="unlock-page__title">
             { t('welcomeBack') }
-          </h1>
+          </h1> */}
           <div>{ t('unlockMessage') }</div>
           <form
             className="unlock-page__form"

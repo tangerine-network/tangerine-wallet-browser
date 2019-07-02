@@ -51,7 +51,7 @@
     "message": "Web3 API 請求"
   },
   "reviewProviderRequest": {
-    "message": "請查看此Ethereum API請求。"
+    "message": "請查看此 Tangerine Network API請求。"
   },
   "accept": {
     "message": "接受"
@@ -99,7 +99,7 @@
     "message": "加入建議的代幣"
   },
   "addAcquiredTokens": {
-    "message": "將您已經擁有的代幣顯示於 MetaMask"
+    "message": "將您已經擁有的代幣顯示於 Tangerine Wallet"
   },
   "advanced": {
     "message": "進階"
@@ -231,7 +231,7 @@
     "message": "關閉"
   },
   "chromeRequiredForHardwareWallets": {
-    "message": "您需要在 Google Chrome 瀏覽器使用 MetaMask 連結您的硬體錢包"
+    "message": "您需要在 Google Chrome 瀏覽器使用 Tangerine Wallet 連結您的硬體錢包"
   },
   "confirm": {
     "message": "確認"
@@ -367,7 +367,7 @@
     "message": "小數點精度"
   },
   "defaultNetwork": {
-    "message": "預設乙太幣交易網路為主網路"
+    "message": "預設TAN交易網路為主網路"
   },
   "delete": {
     "message": "刪除"
@@ -386,10 +386,10 @@
     "description": "Tells the user what coin they have selected to deposit with shapeshift"
   },
   "depositEth": {
-    "message": "存入乙太幣"
+    "message": "存入 TAN"
   },
   "depositEther": {
-    "message": "存入乙太幣"
+    "message": "存入 TAN"
   },
   "depositFiat": {
     "message": "從法定貨幣存入"
@@ -401,7 +401,7 @@
     "message": "從 ShapeShift 存入"
   },
   "depositShapeShiftExplainer": {
-    "message": "如果您擁有其他加密貨幣，可直接轉換為乙太幣存入 MetaMask 錢包。不需開新帳戶。"
+    "message": "如果您擁有其他加密貨幣，可直接轉換為TAN存入 Tangerine Wallet 錢包。不需開新帳戶。"
   },
   "details": {
     "message": "詳情"
@@ -410,10 +410,10 @@
     "message": "直接存入"
   },
   "directDepositEther": {
-    "message": "直接存入乙太幣"
+    "message": "直接存入 TAN"
   },
   "directDepositEtherExplainer": {
-    "message": "如果您已經擁有乙太幣，直接存入功能是讓新錢包最快取得乙太幣的方式。"
+    "message": "如果您已經擁有 TAN，直接存入功能是讓新錢包最快取得TAN的方式。"
   },
   "done": {
     "message": "完成"
@@ -467,10 +467,10 @@
     "message": "您所輸入的密碼不一致"
   },
   "eth": {
-    "message": "ETH"
+    "message": "TAN"
   },
   "etherscanView": {
-    "message": "在 Etherscan 上查看帳戶"
+    "message": "在 Tangerine Garden 上查看帳戶"
   },
   "estimatedProcessingTimes": {
     "message": "預估處理時間"
@@ -578,10 +578,10 @@
     "message": "產生交易"
   },
   "getEther": {
-    "message": "取得乙太幣"
+    "message": "取得 TAN"
   },
   "getEtherFromFaucet": {
-    "message": "從水管取得 $1 乙太幣。",
+    "message": "從水管取得 $1 TAN。",
     "description": "Displays network name for Ether faucet"
   },
   "getHelp": {
@@ -601,7 +601,7 @@
     "message": "連線硬體錢包"
   },
   "hardwareWalletsMsg": {
-    "message": "選擇要連線到 MetaMask 的硬體錢包"
+    "message": "選擇要連線到 Tangerine Wallet 的硬體錢包"
   },
   "havingTroubleConnecting": {
     "message": "無法正確連線?"
@@ -629,10 +629,10 @@
     "message": "紀錄"
   },
   "howToDeposit": {
-    "message": "您想怎麼存入乙太幣？"
+    "message": "您想怎麼存入TAN？"
   },
   "holdEther": {
-    "message": "能讓您保存乙太幣和代幣，並成為您與去中心化應用程式的橋梁"
+    "message": "能讓您保存TAN和代幣，並成為您與去中心化應用程式的橋梁"
   },
   "import": {
     "message": "匯入",
@@ -642,7 +642,7 @@
     "message": "匯入帳戶"
   },
   "importAccountMsg": {
-    "message": " 匯入的帳戶與您原有 MetaMask 帳戶的助憶詞並無關聯。請查看與匯入帳戶相關的資料 "
+    "message": " 匯入的帳戶與您原有 Tangerine Wallet 帳戶的助憶詞並無關聯。請查看與匯入帳戶相關的資料 "
   },
   "importAccountSeedPhrase": {
     "message": "利用助憶詞還原"
@@ -711,7 +711,7 @@
     "description": "format for importing an account"
   },
   "keepTrackTokens": {
-    "message": "持續追蹤您 MetaMask 帳戶中的代幣。"
+    "message": "持續追蹤您 Tangerine Wallet 帳戶中的代幣。"
   },
   "kovan": {
     "message": "Kovan 測試網路"
@@ -760,7 +760,7 @@
     "message": "登出"
   },
   "loose": {
-    "message": "非 MetaMask 帳號"
+    "message": "非 Tangerine Wallet 帳號"
   },
   "loweCaseWords": {
     "message": "助憶詞僅包含小寫字元"
@@ -778,13 +778,13 @@
     "message": "訊息"
   },
   "metamaskDescription": {
-    "message": "MetaMask 是乙太坊安全身份識別金庫"
+    "message": "Tangerine Wallet是Tangerine Network安全身份識別金庫"
   },
   "metamaskSeedWords": {
-    "message": "MetaMask Seed Words"
+    "message": "Tangerine Wallet Seed Words"
   },
   "metamaskVersion": {
-    "message": "MetaMask 版本"
+    "message": "Tangerine Wallet 版本"
   },
   "min": {
     "message": "最小"
@@ -802,7 +802,7 @@
     "message": "必須選擇至少 1 代幣"
   },
   "needEtherInWallet": {
-    "message": "要使用 MetaMask 存取去中心化應用服務時，您的錢包中需要有乙太幣。"
+    "message": "要使用 Tangerine Wallet 存取去中心化應用服務時，您的錢包中需要有TAN。"
   },
   "needImportFile": {
     "message": "您必須選擇一個檔案來匯入",
@@ -813,7 +813,7 @@
     "description": "Password and file needed to import an account"
   },
   "negativeETH": {
-    "message": "不能送出負值的乙太幣"
+    "message": "不能送出負值的TAN"
   },
   "networks": {
     "message": "網路"
@@ -907,10 +907,10 @@
     "message": "您已經切換到舊版界面。可以通過右上方下拉選單中的選項切換回新的使用者界面。"
   },
   "onlySendToEtherAddress": {
-    "message": "只能發送到乙太坊位址"
+    "message": "只能發送到TAN位址"
   },
   "onlySendTokensToAccountAddress": {
-    "message": "只能發送 $1 到乙太坊位址",
+    "message": "只能發送 $1 到Tangerine Network位址",
     "description": "displays token symbol"
   },
   "openInTab": {
@@ -975,7 +975,7 @@
     "message": "主要顯示"
   },
   "primaryCurrencySettingDescription": {
-    "message": "選擇使用乙太幣(ETH)或是法定貨幣(例如：美金)為主要錢幣顯示單位"
+    "message": "選擇使用TAN或是法定貨幣(例如：美金)為主要錢幣顯示單位"
   },
   "privacyMsg": {
     "message": "隱私政策"
@@ -1159,7 +1159,7 @@
     "message": "助憶詞將可協助您用更簡單的方式備份帳戶資訊。"
   },
   "secretBackupPhraseWarning": {
-    "message": "警告: 絕對不要洩漏您的助憶詞。任何人只要得知助憶詞代表他可以竊取您所有的乙太幣和代幣。"
+    "message": "警告: 絕對不要洩漏您的助憶詞。任何人只要得知助憶詞代表他可以竊取您所有的TAN和代幣。"
   },
   "secretPhrase": {
     "message": "輸入您的12個助憶詞以回復金庫"
@@ -1198,13 +1198,13 @@
     "message": "發送數量"
   },
   "sendETH": {
-    "message": "發送乙太幣"
+    "message": "發送TAN"
   },
   "sendTokens": {
     "message": "發送代幣"
   },
   "sentEther": {
-    "message": "發送乙太幣"
+    "message": "發送TAN"
   },
   "sentTokens": {
     "message": "發送代幣"
@@ -1222,7 +1222,7 @@
     "message": "選擇帳戶"
   },
   "selectAnAccountHelp": {
-    "message": "Select the account to view in MetaMask"
+    "message": "Select the account to view in Tangerine Wallet"
   },
   "selectAHigherGasFee": {
     "message": "選擇更高的交易費可加速您的交易處理時間 *"
@@ -1234,7 +1234,7 @@
     "message": "若看不到您已經擁有的 Ledger 帳戶，請嘗試切換路徑為 \"Legacy (MEW / MyCrypto)\""
   },
   "sendTokensAnywhere": {
-    "message": "發送代幣給擁有乙太坊帳戶的任何人"
+    "message": "發送代幣給擁有Tangerine Network帳戶的任何人"
   },
   "settings": {
     "message": "設定"
@@ -1336,7 +1336,7 @@
     "message": "3. 開始使用！"
   },
   "step3HardwareWalletMsg": {
-    "message": "使用您硬體錢包中的帳戶，與去中心化應用服務交易乙太幣、ERC20代幣、或迷戀貓等數位資產。"
+    "message": "使用您硬體錢包中的帳戶，與去中心化應用服務交易TAN、ERC20代幣、或迷戀貓等數位資產。"
   },
   "storePhrase": {
     "message": "您可以用密碼管理系統例如 1Password 等軟體儲存助憶詞。"
@@ -1391,7 +1391,7 @@
     "message": "代幣代號"
   },
   "tokenWarning1": {
-    "message": "使用 MetaMask 帳戶追蹤您已購得的代幣。如果使用不同的帳戶保存購得的代幣，那些代幣就不會出現在這裡。"
+    "message": "使用 Tangerine Wallet 帳戶追蹤您已購得的代幣。如果使用不同的帳戶保存購得的代幣，那些代幣就不會出現在這裡。"
   },
   "total": {
     "message": "總量"
@@ -1473,19 +1473,19 @@
     "message": "再試一次"
   },
   "twelveWords": {
-    "message": "這 12 個單詞是唯一回復您的 MetaMask 帳戶的方法。\n將它們儲存到那些安全且隱密的地方吧。"
+    "message": "這 12 個單詞是唯一回復您的 Tangerine Wallet 帳戶的方法。\n將它們儲存到那些安全且隱密的地方吧。"
   },
   "typePassword": {
     "message": "請輸入密碼"
   },
   "uiMigrationAnnouncement": {
-    "message": "歡迎使用 MetaMask 新版使用介面。若您有任何關於使用介面的改善建議，請到GitHub聯絡我們的服務小組。"
+    "message": "歡迎使用 Tangerine Wallet 新版使用介面。若您有任何關於使用介面的改善建議，請到GitHub聯絡我們的服務小組。"
   },
   "uiWelcome": {
     "message": "歡迎使用新版界面 (Beta)"
   },
   "uiWelcomeMessage": {
-    "message": "您現在正在使用 MetaMask 新版界面。試試發送代幣等新功能吧，有任何問題請告知我們。"
+    "message": "您現在正在使用 Tangerine Wallet 新版界面。試試發送代幣等新功能吧，有任何問題請告知我們。"
   },
   "unapproved": {
     "message": "未批准"
@@ -1546,7 +1546,7 @@
     "message": "查看帳戶"
   },
   "viewOnEtherscan": {
-    "message": "在 Etherscan 上瀏覽"
+    "message": "在 Tangerine Garden 上瀏覽"
   },
   "visitWebSite": {
     "message": "造訪我們的網站"
@@ -1558,7 +1558,7 @@
     "message": "歡迎回來!"
   },
   "welcome": {
-    "message": "歡迎來到 MetaMask"
+    "message": "歡迎來到 Tangerine Wallet"
   },
   "whatsThis": {
     "message": "這是什麼？"

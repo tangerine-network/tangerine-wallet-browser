@@ -1,14 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#38393A;}
-</style>
-<title>deposit-eth</title>
-<desc>Created with Sketch.</desc>
-<g id="deposit-eth" transform="translate(0.000000, 14.000000)">
-	<path id="Shape" class="st0" d="M19.9,16L7.5,8.7L19.9,26L32.3,8.7L19.9,16L19.9,16z M20.1-14L7.7,6.4l12.4,7.3l12.4-7.2L20.1-14z"
-		/>
-</g>
+<svg xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewBox="0 0 31 30">
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#F3953F" d="M12.902 29.542C5.604 28.48 0 22.197 0 14.606c0-2.456.586-4.774 1.626-6.823 7.298 1.062 12.902 7.344 12.902 14.936a15.03 15.03 0 0 1-1.626 6.823z"/>
+        <path fill="#F27038" d="M21.447.896c5.238 2.368 8.883 7.639 8.883 13.76 0 7.726-5.803 14.095-13.288 14.988-5.237-2.368-8.882-7.639-8.882-13.76 0-7.726 5.803-14.095 13.287-14.988z"/>
+        <path fill="#DF6730" d="M.696 19.221a15.168 15.168 0 0 1 4.951-.825c6.786 0 12.532 4.45 14.48 10.59a15.168 15.168 0 0 1-4.951.825c-6.786 0-12.532-4.45-14.48-10.59z"/>
+        <path fill="#C55C27" d="M29.463 9.575c.561 1.586.867 3.292.867 5.07 0 8.098-6.337 14.715-14.322 15.164a15.164 15.164 0 0 1-.867-5.07c0-8.097 6.337-14.714 14.322-15.164z"/>
+        <path fill="#F4B544" d="M6.247 6.242A5.763 5.763 0 0 1 11.695 0a5.763 5.763 0 0 1-5.448 6.242z"/>
+    </g>
 </svg>
