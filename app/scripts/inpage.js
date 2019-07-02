@@ -108,7 +108,8 @@ const proxiedInpageProvider = new Proxy(inpageProvider, {
   deleteProperty: () => true,
 })
 
-window.ethereum = createStandardProvider(proxiedInpageProvider)
+// window.ethereum = createStandardProvider(proxiedInpageProvider)
+window.tangerine = createStandardProvider(proxiedInpageProvider)
 
 //
 // setup web3

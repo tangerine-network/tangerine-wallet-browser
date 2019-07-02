@@ -128,7 +128,7 @@ export default class LoadingNetworkScreen extends PureComponent {
       <div className="loading-overlay">
         <div
           className="page-container__header-close"
-          onClick={() => setProviderType(lastSelectedProvider || 'ropsten')}
+          onClick={() => setProviderType(lastSelectedProvider || 'tangerine_testnet')}
         />
         <div className="loading-overlay__container">
           { this.state.showErrorScreen

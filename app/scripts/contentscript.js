@@ -69,9 +69,9 @@ async function setupStreams () {
   // create and connect channel muxers
   // so we can handle the channels individually
   const pageMux = new ObjectMultiplex()
-  pageMux.setMaxListeners(25)
+  pageMux.setMaxListeners(100)
   const extensionMux = new ObjectMultiplex()
-  extensionMux.setMaxListeners(25)
+  extensionMux.setMaxListeners(100)
 
   pump(
     pageMux,
