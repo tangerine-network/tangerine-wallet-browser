@@ -50,7 +50,7 @@ const defaultNetworksData = [
     providerType: 'tangerine_testnet',
     rpcUrl: 'https://testnet-rpc.tangerine-network.io',
     chainId: '374',
-    ticker: 'ETH',
+    ticker: 'TAN',
     blockExplorerUrl: 'https://testnet.tangerine.garden',
   },
   {
