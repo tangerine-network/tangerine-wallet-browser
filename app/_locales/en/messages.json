@@ -132,11 +132,11 @@
     "message": "Amount + TX Fee"
   },
   "appDescription": {
-    "message": "An Ethereum Wallet in your Browser",
+    "message": "An Tangerine Wallet in your Browser",
     "description": "The description of the application"
   },
   "appName": {
-    "message": "MetaMask",
+    "message": "Tangerine Wallet",
     "description": "The name of the application"
   },
   "approve": {

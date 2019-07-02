@@ -114,11 +114,11 @@
     "message": "數量 + 交易費"
   },
   "appDescription": {
-    "message": "乙太坊瀏覽器擴充插件",
+    "message": "柑橘之鍊瀏覽器錢包",
     "description": "The description of the application"
   },
   "appName": {
-    "message": "MetaMask",
+    "message": "Tangerine Wallet",
     "description": "The name of the application"
   },
   "approved": {
