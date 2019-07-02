@@ -105,7 +105,7 @@ export function decEthToConvertedCurrency (ethTotal, convertedCurrency, conversi
   return conversionUtil(ethTotal, {
     fromNumericBase: 'dec',
     toNumericBase: 'dec',
-    fromCurrency: 'TAN',
+    fromCurrency: 'ETH',
     toCurrency: convertedCurrency,
     numberOfDecimals: 2,
     conversionRate,

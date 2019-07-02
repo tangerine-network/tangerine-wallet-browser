@@ -55,7 +55,7 @@ export function addFiat (...args) {
 
 export function getValueFromWeiHex ({
   value,
-  fromCurrency = 'TAN',
+  fromCurrency = 'ETH',
   toCurrency,
   conversionRate,
   numberOfDecimals,
@@ -75,7 +75,7 @@ export function getValueFromWeiHex ({
 
 export function getTransactionFee ({
   value,
-  fromCurrency = 'TAN',
+  fromCurrency = 'ETH',
   toCurrency,
   conversionRate,
   numberOfDecimals,
@@ -101,7 +101,7 @@ export function formatCurrency (value, currencyCode) {
 
 export function convertTokenToFiat ({
   value,
-  fromCurrency = 'TAN',
+  fromCurrency = 'ETH',
   toCurrency,
   conversionRate,
   contractExchangeRate,

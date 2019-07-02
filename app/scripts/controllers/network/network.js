@@ -44,7 +44,7 @@ const defaultProviderConfig = {
 }
 
 const defaultNetworkConfig = {
-  ticker: 'TAN',
+  ticker: 'ETH',
 }
 
 module.exports = class NetworkController extends EventEmitter {
@@ -132,7 +132,7 @@ module.exports = class NetworkController extends EventEmitter {
     })
   }
 
-  setRpcTarget (rpcTarget, chainId, ticker = 'TAN', nickname = '', rpcPrefs) {
+  setRpcTarget (rpcTarget, chainId, ticker = 'ETH', nickname = '', rpcPrefs) {
     const providerConfig = {
       type: 'rpc',
       rpcTarget,
@@ -144,10 +144,8 @@ module.exports = class NetworkController extends EventEmitter {
     this.providerConfig = providerConfig
   }
 
-  async setProviderType (type, rpcTarget = '', ticker = 'TAN', nickname = '') {
-    console.log('1')
+  async setProviderType (type, rpcTarget = '', ticker = 'ETH', nickname = '') {
     assert.notEqual(type, 'rpc', `NetworkController - cannot call "setProviderType" with type 'rpc'. use "setRpcTarget"`)
-    console.log('2')
 
     if (INFURA_PROVIDER_TYPES.includes(type)) {
       assert(INFURA_PROVIDER_TYPES.includes(type) || type === LOCALHOST, `NetworkController - Unknown rpc type "${type}"`)
@@ -155,7 +153,6 @@ module.exports = class NetworkController extends EventEmitter {
       assert(TANGERINE_PROVIDER_TYPES.includes(type) || type === LOCALHOST, `NetworkController - Unknown rpc type "${type}"`)
     }
     const providerConfig = { type, rpcTarget, ticker, nickname }
-    console.log('providerConfig', providerConfig)
     this.providerConfig = providerConfig
   }
 
@@ -188,7 +185,6 @@ module.exports = class NetworkController extends EventEmitter {
 
     const isInfura = INFURA_PROVIDER_TYPES.includes(type)
     const isTangerine = TANGERINE_PROVIDER_TYPES.includes(type)
-    console.log('_configureProvider', opts, isTangerine)
     if (isTangerine) {
       this._configureTangerineProvider(opts)
     } else if (isInfura) {

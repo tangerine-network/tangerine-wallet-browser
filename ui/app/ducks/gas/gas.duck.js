@@ -226,8 +226,6 @@ export function fetchBasicGasEstimates () {
           fastest: gasEstimate * 2,
         }
 
-        console.log('!!!BASIC GAS ESTIMATE', basicEstimates)
-
         const timeRetrieved = Date.now()
         dispatch(setBasicPriceEstimatesLastRetrieved(timeRetrieved))
         saveLocalStorageData(timeRetrieved, 'BASIC_PRICE_ESTIMATES_LAST_RETRIEVED')
@@ -257,18 +255,6 @@ export function fetchBasicGasAndTimeEstimates () {
     const timeLastRetrieved = basicPriceAndTimeEstimatesLastRetrieved || loadLocalStorageData('BASIC_GAS_AND_TIME_API_ESTIMATES_LAST_RETRIEVED') || 0
 
     dispatch(basicGasEstimatesLoadingStarted())
-
-    fetch('https://testnet-rpc.tangerine-network.io', {
-      'headers': {
-        'Content-Type': 'application/json',
-      },
-      'body': '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":67}',
-      'method': 'POST',
-    })
-    .then(r => r.json())
-    .then((res) => {
-      console.log('RES FROM TANGERINE RPC!!!!!', res)
-    })
 
     const promiseToFetch = Date.now() - timeLastRetrieved > 75000
       ? fetch('https://testnet-rpc.tangerine-network.io', {
