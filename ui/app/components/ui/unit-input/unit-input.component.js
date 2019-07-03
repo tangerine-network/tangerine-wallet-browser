@@ -96,7 +96,7 @@ export default class UnitInput extends PureComponent {
             {
               suffix && (
                 <div className="unit-input__suffix">
-                  { suffix }
+                  { (suffix === 'ETH') ? 'TAN' : suffix}
                 </div>
               )
             }

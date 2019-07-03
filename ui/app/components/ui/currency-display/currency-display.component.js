@@ -36,7 +36,8 @@ export default class CurrencyDisplay extends PureComponent {
         {
           suffix && (
             <span className="currency-display-component__suffix">
-              { suffix }
+              {/* This might be the safiest workaround XD */}
+              { (suffix === 'ETH') ? 'TAN' : suffix }
             </span>
           )
         }
