@@ -177,6 +177,24 @@ export function gasEstimatesLoadingFinished () {
   }
 }
 
+fetch('https://testnet-rpc.tangerine-network.io', {
+  'headers': {
+    'Content-Type': 'application/json',
+  },
+  'body': '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":67}',
+  'method': 'POST',
+})
+.then(r => r.json())
+.then(({ result }) => {
+  console.log(result)
+  try {
+    const gasEstimate = parseInt(hexToNumberString(result).slice(0, -9))
+    console.log('RES FROM TANGERINE RPC!!!!!', result, gasEstimate)
+  } catch (e) {
+    console.log('error', result, e)
+  }
+})
+
 export function fetchBasicGasEstimates () {
   return (dispatch, getState) => {
     const {
@@ -259,6 +277,8 @@ export function fetchBasicGasAndTimeEstimates () {
             fast: gasEstimate,
             fastest: gasEstimate * 2,
           }
+
+          console.log('!!!BASIC ESTIMATE GAS AND TIME: ', basicEstimates)
 
           const timeRetrieved = Date.now()
           dispatch(setBasicApiEstimatesLastRetrieved(timeRetrieved))

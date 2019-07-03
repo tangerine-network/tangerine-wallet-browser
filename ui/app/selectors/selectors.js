@@ -96,7 +96,7 @@ function getAccountType (state) {
 
 function getSelectedAsset (state) {
   const selectedToken = getSelectedToken(state)
-  return selectedToken && selectedToken.symbol || 'TAN'
+  return selectedToken && selectedToken.symbol || 'ETH'
 }
 
 function getCurrentNetworkId (state) {

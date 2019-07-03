@@ -1982,7 +1982,7 @@ function setPreviousProvider (type) {
   }
 }
 
-function updateAndSetCustomRpc (newRpc, chainId, ticker = 'TAN', nickname, rpcPrefs) {
+function updateAndSetCustomRpc (newRpc, chainId, ticker = 'ETH', nickname, rpcPrefs) {
   return (dispatch) => {
     log.debug(`background.updateAndSetCustomRpc: ${newRpc} ${chainId} ${ticker} ${nickname}`)
     background.updateAndSetCustomRpc(newRpc, chainId, ticker, nickname || newRpc, rpcPrefs, (err) => {
@@ -1998,7 +1998,7 @@ function updateAndSetCustomRpc (newRpc, chainId, ticker = 'TAN', nickname, rpcPr
   }
 }
 
-function editRpc (oldRpc, newRpc, chainId, ticker = 'TAN', nickname, rpcPrefs) {
+function editRpc (oldRpc, newRpc, chainId, ticker = 'ETH', nickname, rpcPrefs) {
   return (dispatch) => {
     log.debug(`background.delRpcTarget: ${oldRpc}`)
     background.delCustomRpc(oldRpc, (err) => {
@@ -2021,7 +2021,7 @@ function editRpc (oldRpc, newRpc, chainId, ticker = 'TAN', nickname, rpcPrefs) {
   }
 }
 
-function setRpcTarget (newRpc, chainId, ticker = 'TAN', nickname) {
+function setRpcTarget (newRpc, chainId, ticker = 'ETH', nickname) {
   return (dispatch) => {
     log.debug(`background.setRpcTarget: ${newRpc} ${chainId} ${ticker} ${nickname}`)
     background.setCustomRpc(newRpc, chainId, ticker, nickname || newRpc, (err) => {

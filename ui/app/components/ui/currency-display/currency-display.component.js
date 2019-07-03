@@ -24,7 +24,7 @@ export default class CurrencyDisplay extends PureComponent {
     const { className, displayValue, prefix, prefixComponent, style, suffix, hideTitle } = this.props
     const text = `${prefix || ''}${displayValue}`
     const title = suffix ? `${text} ${suffix}` : text
-    console.log('suffix', suffix)
+
     return (
       <div
         className={classnames('currency-display-component', className)}

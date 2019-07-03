@@ -137,7 +137,7 @@ function parseBalance (balance) {
 
 // Takes wei hex, returns an object with three properties.
 // Its "formatted" property is what we generally use to render values.
-function formatBalance (balance, decimalsToKeep, needsParse = true, ticker = 'TAN') {
+function formatBalance (balance, decimalsToKeep, needsParse = true, ticker = 'ETH') {
   var parsed = needsParse ? parseBalance(balance) : balance.split('.')
   var beforeDecimal = parsed[0]
   var afterDecimal = parsed[1]
