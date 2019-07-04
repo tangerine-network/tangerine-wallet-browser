@@ -1,5 +1,5 @@
 const extension = require('extensionizer')
-const {createExplorerLink: explorerLink} = require('etherscan-link')
+// const {createExplorerLink: explorerLink} = require('etherscan-link')
 
 class ExtensionPlatform {
 
@@ -64,11 +64,13 @@ class ExtensionPlatform {
 
     this._subscribeToNotificationClicked()
 
-    const url = explorerLink(txMeta.hash, parseInt(txMeta.metamaskNetworkId))
+    // const url = explorerLink(txMeta.hash, parseInt(txMeta.metamaskNetworkId))
+    const prefix = (parseInt(txMeta.metamaskNetworkId) === 373) ? '' : 'testnet.'
+    const url = `http://${prefix}tangerine.garden/transaction/${txMeta.hash}`
     const nonce = parseInt(txMeta.txParams.nonce, 16)
 
     const title = 'Confirmed transaction'
-    const message = `Transaction ${nonce} confirmed! View on EtherScan`
+    const message = `Transaction ${nonce} confirmed! View on Tangerine Garden`
     this._showNotification(title, message, url)
   }
 
