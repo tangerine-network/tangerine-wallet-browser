@@ -21,7 +21,7 @@
   },
   "applications": {
     "gecko": {
-      "id": "webextension@metamask.io"
+      "id": "dev@byzantine-lab.io"
     }
   },
   "default_locale": "en",
@@ -68,9 +68,10 @@
     "clipboardWrite",
     "http://localhost:8545/",
     "https://*.infura.io/",
-    "https://*.tangerine.garden",
+    "https://*.tangerine-network.io/*",
     "activeTab",
     "webRequest",
+    "*://*.eth/",
     "notifications"
   ],
   "web_accessible_resources": [
