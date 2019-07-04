@@ -41,7 +41,7 @@ export default class GasPriceButtonGroup extends Component {
       { timeEstimate && <div className={`${className}__time-estimate`}>{ timeEstimate }</div> }
       {feeInPrimaryCurrency && (
         <div className={`${className}__primary-currency`}>
-          { feeInPrimaryCurrency.replace('ETH', 'TAN') }
+          { (feeInPrimaryCurrency || '').replace('ETH', 'TAN') }
         </div>)}
       { feeInSecondaryCurrency && <div className={`${className}__secondary-currency`}>{ feeInSecondaryCurrency }</div> }
       { showCheck && <div className="button-check-wrapper"><i className="fa fa-check fa-sm" /></div> }

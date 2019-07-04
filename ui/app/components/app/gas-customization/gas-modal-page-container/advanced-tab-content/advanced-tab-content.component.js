@@ -124,7 +124,7 @@ export default class AdvancedTabContent extends Component {
         </div>
         <div className="advanced-tab__transaction-data-summary__container">
           <div className="advanced-tab__transaction-data-summary__fee">
-            {transactionFee}
+            {(transactionFee || '').replace('ETH', 'TAN')}
           </div>
           <div className="time-remaining">{timeRemaining}</div>
         </div>
@@ -204,20 +204,19 @@ export default class AdvancedTabContent extends Component {
             customPriceIsSafe,
             isSpeedUp,
           }) }
-          { isEthereumNetwork
-            ? <div>
-              <div className="advanced-tab__fee-chart__title">{ t('liveGasPricePredictions') }</div>
-              {!gasEstimatesLoading
-                ? <GasPriceChart {...gasChartProps} updateCustomGasPrice={updateCustomGasPrice} />
-                : <Loading />
-              }
-              <div className="advanced-tab__fee-chart__speed-buttons">
-                <span>{ t('slower') }</span>
-                <span>{ t('faster') }</span>
-              </div>
+          { isEthereumNetwork && (
+            <div>
+                <div className="advanced-tab__fee-chart__title">{ t('liveGasPricePredictions') }</div>
+                {!gasEstimatesLoading
+                  ? <GasPriceChart {...gasChartProps} updateCustomGasPrice={updateCustomGasPrice} />
+                  : <Loading />
+                }
+                <div className="advanced-tab__fee-chart__speed-buttons">
+                  <span>{ t('slower') }</span>
+                  <span>{ t('faster') }</span>
+                </div>
             </div>
-            : <div className="advanced-tab__fee-chart__title">{ t('chartOnlyAvailableEth') }</div>
-          }
+          )}
         </div>
       </div>
     )

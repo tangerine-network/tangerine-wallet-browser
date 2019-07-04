@@ -103,15 +103,15 @@ export default class GasModalPageContainer extends Component {
         <div className="gas-modal-content__info-row">
           <div className="gas-modal-content__info-row__send-info">
             <span className="gas-modal-content__info-row__send-info__label">{this.context.t('sendAmount')}</span>
-            <span className="gas-modal-content__info-row__send-info__value">{sendAmount}</span>
+            <span className="gas-modal-content__info-row__send-info__value">{(sendAmount || '').replace('ETH', 'TAN')}</span>
           </div>
           <div className="gas-modal-content__info-row__transaction-info">
             <span className={'gas-modal-content__info-row__transaction-info__label'}>{this.context.t('transactionFee')}</span>
-            <span className="gas-modal-content__info-row__transaction-info__value">{transactionFee}</span>
+            <span className="gas-modal-content__info-row__transaction-info__value">{(transactionFee || '').replace('ETH', 'TAN')}</span>
           </div>
           <div className="gas-modal-content__info-row__total-info">
             <span className="gas-modal-content__info-row__total-info__label">{this.context.t('newTotal')}</span>
-            <span className="gas-modal-content__info-row__total-info__value">{newTotalEth}</span>
+            <span className="gas-modal-content__info-row__total-info__value">{(newTotalEth || '').replace('ETH', 'TAN')}</span>
           </div>
           <div className="gas-modal-content__info-row__fiat-total-info">
             <span className="gas-modal-content__info-row__fiat-total-info__value">{newTotalFiat}</span>
