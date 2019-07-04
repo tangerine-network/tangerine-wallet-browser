@@ -2,6 +2,8 @@
 
 ## Current Develop Branch
 
+## 6.7.2 Thu Jul 04 2019
+
 ## 6.7.1 Fri Jun 28 2019
 - [#6764](https://github.com/MetaMask/metamask-extension/pull/6764): Fix display of token amount on confirm transaction screen
 
