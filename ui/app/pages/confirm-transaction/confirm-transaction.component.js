@@ -85,7 +85,20 @@ export default class ConfirmTransaction extends Component {
       totalUnapprovedCount,
     } = this.props
 
-    if (paramsTransactionId && transactionId && prevProps.paramsTransactionId !== paramsTransactionId) {
+    let thisGas
+    let prevGas
+    try {
+      thisGas = this.props.transaction.txParams.gas
+      prevGas = prevProps.transaction.txParams.gas
+    } catch (e) {
+      thisGas = undefined
+      prevGas = undefined
+    }
+
+    if (
+      (paramsTransactionId && transactionId && prevProps.paramsTransactionId !== paramsTransactionId) ||
+      (thisGas !== prevGas)
+    ) {
       clearConfirmTransaction()
       getContractMethodData(data)
       setTransactionToConfirm(paramsTransactionId)
