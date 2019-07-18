@@ -36,7 +36,7 @@ function injectScript () {
     const container = document.head || document.documentElement
     const scriptTag = document.createElement('script')
     scriptTag.setAttribute('async', false)
-    scriptTag.src = extension.extension.getURL('inpage.js')
+    scriptTag.src = extension.runtime.getURL('inpage.js')
     container.insertBefore(scriptTag, container.children[0])
     // container.removeChild(scriptTag)
   } catch (e) {
