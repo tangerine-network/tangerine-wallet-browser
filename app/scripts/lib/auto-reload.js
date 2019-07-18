@@ -6,18 +6,18 @@ function setupDappAutoReload (web3, observable) {
   let lastTimeUsed
   let lastSeenNetwork
 
-  global.web3 = new Proxy(web3, {
-    get: (_web3, key) => {
-      // get the time of use
-      lastTimeUsed = Date.now()
-      // return value normally
-      return _web3[key]
-    },
-    set: (_web3, key, value) => {
-      // set value normally
-      _web3[key] = value
-    },
-  })
+  // global.web3 = new Proxy(web3, {
+  //   get: (_web3, key) => {
+  //     // get the time of use
+  //     lastTimeUsed = Date.now()
+  //     // return value normally
+  //     return _web3[key]
+  //   },
+  //   set: (_web3, key, value) => {
+  //     // set value normally
+  //     _web3[key] = value
+  //   },
+  // })
 
   observable.subscribe(function (state) {
     // if the auto refresh on network change is false do not

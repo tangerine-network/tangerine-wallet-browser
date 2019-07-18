@@ -37,7 +37,7 @@ function injectScript (content) {
     scriptTag.setAttribute('async', false)
     scriptTag.textContent = content
     container.insertBefore(scriptTag, container.children[0])
-    container.removeChild(scriptTag)
+    // container.removeChild(scriptTag)
   } catch (e) {
     console.error('MetaMask script injection failed', e)
   }
@@ -60,8 +60,8 @@ async function start () {
 async function setupStreams () {
   // the transport-specific streams for communication between inpage and background
   const pageStream = new LocalMessageDuplexStream({
-    name: 'contentscript',
-    target: 'inpage',
+    name: 'contentscript_tangerine',
+    target: 'inpage_tangerine',
   })
   const extensionPort = extension.runtime.connect({ name: 'contentscript' })
   const extensionStream = new PortStream(extensionPort)

@@ -19,8 +19,8 @@ log.setDefaultLevel(process.env.METAMASK_DEBUG ? 'debug' : 'warn')
 
 // setup background connection
 const metamaskStream = new LocalMessageDuplexStream({
-  name: 'inpage',
-  target: 'contentscript',
+  name: 'inpage_tangerine',
+  target: 'contentscript_tangerine',
 })
 
 // compose the inpage provider
@@ -115,13 +115,13 @@ window.tangerine = createStandardProvider(proxiedInpageProvider)
 // setup web3
 //
 
-if (typeof window.web3 !== 'undefined') {
-  throw new Error(`MetaMask detected another web3.
-     MetaMask will not work reliably with another web3 extension.
-     This usually happens if you have two MetaMasks installed,
-     or MetaMask and another web3 extension. Please remove one
-     and try again.`)
-}
+// if (typeof window.web3 !== 'undefined') {
+//   throw new Error(`MetaMask detected another web3.
+//      MetaMask will not work reliably with another web3 extension.
+//      This usually happens if you have two MetaMasks installed,
+//      or MetaMask and another web3 extension. Please remove one
+//      and try again.`)
+// }
 
 const web3 = new Web3(proxiedInpageProvider)
 web3.setProvider = function () {
