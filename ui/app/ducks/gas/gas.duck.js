@@ -11,6 +11,9 @@ import {
 import {
   isEthereumNetwork,
 } from '../../selectors/selectors'
+import {
+  defaultNetworksData
+} from '../../pages/settings/networks-tab/networks-tab.constants';
 
 // Actions
 const BASIC_GAS_ESTIMATE_LOADING_FINISHED = 'metamask/gas/BASIC_GAS_ESTIMATE_LOADING_FINISHED'
@@ -186,8 +189,12 @@ export function fetchBasicGasEstimates () {
     const timeLastRetrieved = basicPriceEstimatesLastRetrieved || loadLocalStorageData('BASIC_PRICE_ESTIMATES_LAST_RETRIEVED') || 0
 
     dispatch(basicGasEstimatesLoadingStarted())
+
+    const { provider } = getState().metamask;
+    const { rpcUrl } = defaultNetworksData.find(it => it.providerType === provider.type) || {};
+
     const promiseToFetch = Date.now() - timeLastRetrieved > 75000
-    ? fetch('https://testnet-rpc.tangerine-network.io', {
+    ? fetch(rpcUrl, {
       'headers': {
         'Content-Type': 'application/json',
       },
@@ -236,10 +243,14 @@ export function fetchBasicGasAndTimeEstimates () {
     } = getState().gas
     const timeLastRetrieved = basicPriceAndTimeEstimatesLastRetrieved || loadLocalStorageData('BASIC_GAS_AND_TIME_API_ESTIMATES_LAST_RETRIEVED') || 0
 
+
+    const { provider } = getState().metamask;
+    const { rpcUrl } = defaultNetworksData.find(it => it.providerType === provider.type) || {};
+
     dispatch(basicGasEstimatesLoadingStarted())
 
     const promiseToFetch = Date.now() - timeLastRetrieved > 75000
-      ? fetch('https://testnet-rpc.tangerine-network.io', {
+      ? fetch(rpcUrl, {
         'headers': {
           'Content-Type': 'application/json',
         },

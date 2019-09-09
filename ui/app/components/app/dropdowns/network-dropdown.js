@@ -307,7 +307,6 @@ NetworkDropdown.prototype.getNetworkName = function () {
 
   let name
   if (providerName === 'tangerine_testnet') {
-    console.log('tangerine netowkr get name!!')
     name = this.context.t('tangerine_testnet')
   } else if (providerName === 'mainnet') {
     name = this.context.t('mainnet')
