@@ -32,7 +32,7 @@ export default class InfoTab extends PureComponent {
         </div>
         <div className="info-tab__link-item">
           <a
-            href="https://metamask.io/privacy.html"
+            href="https://tangerine-network.io/tangerine_wallet_privacy/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -43,7 +43,7 @@ export default class InfoTab extends PureComponent {
         </div>
         <div className="info-tab__link-item">
           <a
-            href="https://metamask.io/terms.html"
+            href="https://tangerine-network.io/tangerine_wallet_terms/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -124,6 +124,7 @@ export default class InfoTab extends PureComponent {
             </div>
             <div className="info-tab__item">
               <div className="info-tab__about">
+                Tangerine Wallet is based on MetaMask<br />
                 { t('builtInCalifornia') }
               </div>
             </div>
