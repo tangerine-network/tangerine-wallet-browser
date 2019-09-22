@@ -138,7 +138,27 @@ NetworkDropdown.prototype.render = function () {
     //     }, this.context.t('mainnet')),
     //   ]
     // ),
-
+    h(
+      DropdownMenuItem,
+      {
+        key: 'tangerine_mainnet',
+        closeMenu: () => this.props.hideNetworkDropdown(),
+        onClick: () => this.handleClick('tangerine_mainnet'),
+        style: dropdownMenuItemStyle,
+      },
+      [
+        providerType === 'tangerine_mainnet' ? h('i.fa.fa-check') : h('.network-check__transparent', '✓'),
+        h(NetworkDropdownIcon, {
+          backgroundColor: '#ff9248',
+          isSelected: providerType === 'tangerine_mainnet',
+        }),
+        h('span.network-name-item', {
+          style: {
+            color: providerType === 'tangerine_testnet' ? '#ffffff' : '#9b9b9b',
+          },
+        }, this.context.t('tangerine_mainnet')),
+      ]
+    ),
     h(
       DropdownMenuItem,
       {
@@ -307,6 +327,8 @@ NetworkDropdown.prototype.getNetworkName = function () {
 
   let name
   if (providerName === 'tangerine_testnet') {
+    name = this.context.t('tangerine_mainnet')
+  } else if (providerName === 'tangerine_testnet') {
     name = this.context.t('tangerine_testnet')
   } else if (providerName === 'mainnet') {
     name = this.context.t('mainnet')

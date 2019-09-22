@@ -50,6 +50,9 @@ Network.prototype.render = function () {
   } else if (providerName === 'goerli') {
     hoverText = context.t('goerli')
     iconName = 'goerli-test-network'
+  } else if (providerName === 'tangerine_mainnet') {
+    hoverText = context.t('tangerine_mainnet')
+    iconName = 'tangerine_mainnet'
   } else if (providerName === 'tangerine_testnet') {
     hoverText = context.t('tangerine_testnet')
     iconName = 'tangerine_testnet'
@@ -77,6 +80,16 @@ Network.prototype.render = function () {
     }, [
       (function () {
         switch (iconName) {
+          case 'tangerine_mainnet':
+            return h('.network-indicator', [
+              h(NetworkDropdownIcon, {
+                backgroundColor: '#ff9248	', // $wild-strawberry
+                nonSelectBackgroundColor: '#15afb2',
+                loading: networkNumber === 'loading',
+              }),
+              h('.network-name', context.t('tangerine_mainnet')),
+              h('.network-indicator__down-arrow'),
+            ])
           case 'tangerine_testnet':
             return h('.network-indicator', [
               h(NetworkDropdownIcon, {

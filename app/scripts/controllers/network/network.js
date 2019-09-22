@@ -23,9 +23,16 @@ const {
   GOERLI,
   TANGERINE_TESTNET,
   TANGERINE_TESTNET_RPC,
+  TANGERINE_MAINNET,
+  TANGERINE_MAINNET_RPC,
 } = require('./enums')
 const INFURA_PROVIDER_TYPES = [ROPSTEN, RINKEBY, KOVAN, MAINNET, GOERLI]
-const TANGERINE_PROVIDER_TYPES = [TANGERINE_TESTNET]
+const TANGERINE_PROVIDER_TYPES = [TANGERINE_TESTNET, TANGERINE_MAINNET]
+
+const TANGERINE_RPC_MAPPING = {
+  [TANGERINE_TESTNET]: TANGERINE_TESTNET_RPC,
+  [TANGERINE_MAINNET]: TANGERINE_MAINNET_RPC
+};
 
 const env = process.env.METAMASK_ENV
 const METAMASK_DEBUG = process.env.METAMASK_DEBUG
@@ -213,7 +220,9 @@ module.exports = class NetworkController extends EventEmitter {
 
   _configureTangerineProvider ({ type }) {
     log.info('NetworkController - configureTangerineProvider', type)
-    const networkClient = createJsonRpcClient({ rpcUrl: TANGERINE_TESTNET_RPC })
+    const networkClient = createJsonRpcClient({
+      rpcUrl: TANGERINE_RPC_MAPPING[type],
+    })
     this._setNetworkClient(networkClient)
   }
 

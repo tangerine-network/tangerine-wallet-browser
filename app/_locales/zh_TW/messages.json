@@ -1,4 +1,7 @@
 {
+  "tangerine_mainnet": {
+    "message": "Tangerine Network"
+  },
   "tangerine_testnet": {
     "message": "Tangerine Testnet"
   },

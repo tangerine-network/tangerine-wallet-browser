@@ -45,6 +45,15 @@ const defaultNetworksData = [
   //   blockExplorerUrl: 'https://goerli.etherscan.io',
   // },
   {
+    labelKey: 'tangerine_mainnet',
+    iconColor: '#FF9248',
+    providerType: 'tangerine_mainnet',
+    rpcUrl: 'https://mainnet-rpc.tangerine-network.io',
+    chainId: '411',
+    ticker: 'ETH',
+    blockExplorerUrl: 'https://tangerine.explorer',
+  },
+  {
     labelKey: 'tangerine_testnet',
     iconColor: '#FF4A8D',
     providerType: 'tangerine_testnet',
